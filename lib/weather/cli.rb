@@ -1,6 +1,6 @@
 class Weather::CLI
 
   def start
-    puts "HELLO"
+    puts "Welcome to the Weather App!"
   end
 end
