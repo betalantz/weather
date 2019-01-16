@@ -4,6 +4,7 @@ require_relative "weather/scraper"
 require_relative "weather/weather"
 
 require 'pry'
+require 'httparty'
 
 
 
