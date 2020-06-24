@@ -4,7 +4,7 @@ class Weather::Scraper
   def initialize(zip)
     @zip = zip
     @country = "US"
-    @key = "1a10f77b2f66b575d11bf68a30ac3296"
+    @key = ENV["KEY"]
 
   end
   
