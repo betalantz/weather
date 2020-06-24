@@ -12,7 +12,7 @@ class Weather::Scraper
 
 
   def fetch_data
-    binding.pry
+    # binding.pry
     url = "http://api.openweathermap.org/data/2.5/weather?zip=#{@zip},#{@country}&units=imperial&APPID=#{key}"
     response = HTTParty.get(url)
     #response.parsed_response  #might not be needed 
@@ -20,7 +20,8 @@ class Weather::Scraper
     pressure = response["main"]["pressure"]
     humidity = response["main"]["humidity"]
     city = response["name"]
-    
+    Weather::Weather.new(temp, pressure, humidity, city)
+    # binding.pry
   end
   
 #   {"coord"=>{"lon"=>-94.61, "lat"=>38.85},

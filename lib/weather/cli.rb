@@ -11,6 +11,16 @@ class Weather::CLI
     zip = validate_input(input)
     api = Weather::Scraper.new(zip)
     api.fetch_data
+    show_weather
+  end
+
+  def show_weather
+    wo = Weather::Weather.all.last
+    puts "City: #{wo.city}"
+    puts "Temp: #{wo.temp}"
+    puts "Pressure: #{wo.pressure}"
+    puts "Humidity: #{wo.humidity}"
+    ask_city
   end
 
 
